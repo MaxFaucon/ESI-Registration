@@ -1,0 +1,136 @@
+#centre {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+  }
+
+  #b1{
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+  }
+
+  button{
+      margin: 10px;
+      margin-top: 20px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+h3{
+  background-color: darkgray;
+}
+
+.box {
+  /* percentage to degree  */
+  --v: calc( ((18/5) * var(--p) - 180)*1deg);
+  
+  width: 100px;
+  display: inline-flex;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(to right, #51A9E4 50%, #6C6F70 0);
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.box::before,
+.box::after {
+  content: "";
+  width: 50%;
+  padding-top:100%;
+  transform: rotate(var(--v));
+}
+
+.box::before {
+  background: 
+    linear-gradient(#51A9E4 0 0) 
+    0 / calc((50 - var(--p))*1%);
+  transform-origin: right;
+}
+
+.box::after {
+  background: 
+    linear-gradient(#6C6F70 0 0)       
+    0 / calc((var(--p) - 50)*1%);
+  transform-origin: left;
+}
+
+#insc{
+  color: #6C6F70;
+}
+
+#nonInsc{
+  color: #51A9E4;
+}
+
+a{
+  color: #6C6F70;
+}
